@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout — FA.SOCIETY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER SAMA SEPERTI LANDING PAGE -->
+    <header>
+        <div class="announcement-bar">
+            <p>DROP TERBARU SUDAH HADIR <span>•</span> TEMUKAN GAYA ANDALANMU</p>
+            <a href="index.html#products" aria-label="Lihat koleksi terbaru"><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="container navbar">
+            <a href="index.html" class="logo">FA<span>.SOCIETY</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#products" class="nav-link">Curated Drops</a></li>
+                <li><a href="tracking.html" class="nav-link">Lacak Pesanan</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="index.html" class="nav-link" style="font-size: 0.85rem;">
+                    <i class="fa-solid fa-arrow-left"></i> Kembali Belanja
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- KONTEN CHECKOUT -->
+    <main class="page-wrapper">
+        <div class="container">
+            <div class="page-title-area">
+                <h1>Checkout</h1>
+                <p>Lengkapi data penerima dan pilih pembayaran untuk menyelesaikan pesanan.</p>
+            </div>
+
+            <form id="checkoutForm" class="checkout-grid">
+                <!-- KOLOM KIRI -->
+                <div class="checkout-left">
+                    <!-- Card 1: Data Penerima -->
+                    <div class="dark-card">
+                        <h3>Data penerima</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="custName">Nama lengkap</label>
+                                <input type="text" id="custName" placeholder="Nama penerima" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="custPhone">Nomor HP</label>
+                                <input type="tel" id="custPhone" placeholder="08xx xxxx xxxx" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="custAddress">Alamat lengkap</label>
+                            <input type="text" id="custAddress" placeholder="Jalan, nomor rumah, RT/RW" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="custCity">Kota / Kabupaten</label>
+                                <input type="text" id="custCity" placeholder="Malang" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="custPostal">Kode pos</label>
+                                <input type="text" id="custPostal" placeholder="65xxx" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Metode Pembayaran -->
+                    <div class="dark-card">
+                        <h3>Metode pembayaran</h3>
+                        <div class="radio-list">
+                            <label class="radio-box active">
+                                <input type="radio" name="payment" value="Transfer bank" checked>
+                                <span class="custom-radio"></span>
+                                <div class="radio-info">
+                                    <strong>Transfer bank</strong>
+                                    <span>BCA, BNI, Mandiri — verifikasi otomatis</span>
+                                </div>
+                            </label>
+                            <label class="radio-box">
+                                <input type="radio" name="payment" value="E-wallet">
+                                <span class="custom-radio"></span>
+                                <div class="radio-info">
+                                    <strong>E-wallet</strong>
+                                    <span>GoPay, OVO, DANA</span>
+                                </div>
+                            </label>
+                            <label class="radio-box">
+                                <input type="radio" name="payment" value="QRIS">
+                                <span class="custom-radio"></span>
+                                <div class="radio-info">
+                                    <strong>QRIS</strong>
+                                    <span>Scan dari aplikasi apa pun</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Kurir Pengiriman -->
+                    <div class="dark-card">
+                        <h3>Kurir pengiriman</h3>
+                        <div class="radio-list" id="courierList">
+                            <label class="radio-box active">
+                                <input type="radio" name="courier" value="JNE Reguler" data-cost="18000" checked>
+                                <span class="custom-radio"></span>
+                                <div class="radio-info">
+                                    <strong>JNE Reguler</strong>
+                                    <span>Estimasi 3-5 hari · Rp18.000</span>
+                                </div>
+                            </label>
+                            <label class="radio-box">
+                                <input type="radio" name="courier" value="J&T Express" data-cost="20000">
+                                <span class="custom-radio"></span>
+                                <div class="radio-info">
+                                    <strong>J&T Express</strong>
+                                    <span>Estimasi 2-4 hari · Rp20.000</span>
+                                </div>
+                            </label>
+                            <label class="radio-box">
+                                <input type="radio" name="courier" value="SiCepat" data-cost="22000">
+                                <span class="custom-radio"></span>
+                                <div class="radio-info">
+                                    <strong>SiCepat</strong>
+                                    <span>Estimasi 2-3 hari · Rp22.000</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KOLOM KANAN: RINGKASAN PESANAN -->
+                <div class="checkout-right">
+                    <div class="dark-card sticky-card">
+                        <h3>Ringkasan pesanan</h3>
+                        <div class="summary-items" id="checkoutItems">
+                            <!-- Item dari keranjang dirender oleh JS -->
+                        </div>
+
+                        <div class="summary-calc">
+                            <div class="calc-row">
+                                <span>Subtotal</span>
+                                <span id="summarySubtotal">Rp0</span>
+                            </div>
+                            <div class="calc-row">
+                                <span>Ongkos kirim</span>
+                                <span id="summaryShipping">Rp18.000</span>
+                            </div>
+                            <div class="calc-total">
+                                <span>Total bayar</span>
+                                <span id="summaryTotal">Rp0</span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-pay">Bayar sekarang</button>
+                        <p class="checkout-note">Invoice dikirim ke email setelah pembayaran berhasil. Pesanan lalu diteruskan ke supplier.</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
